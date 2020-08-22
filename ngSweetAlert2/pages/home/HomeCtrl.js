@@ -26,7 +26,7 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', 'SweetAlert2',
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.value) {
-                    Swal.fire(
+                    SweetAlert2.fire(
                         'Deleted!',
                         'Your file has been deleted.',
                         'success'
