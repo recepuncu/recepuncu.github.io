@@ -17,21 +17,18 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', 'SweetAlert2',
 
         $scope.demo3 = function () {
             SweetAlert2.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
+              title: 'Are you sure?',
+              text: "You won't be able to revert this!",
+              icon: 'warning',   
+              buttons: [true, 'Yes, delete it!']
             }).then((result) => {
-                if (result.value) {
-                    SweetAlert2.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                    )
-                }
+              if (result.value) {
+                SweetAlert2.fire(
+                  'Deleted!',
+                  'Your file has been deleted.',
+                  'success'
+                )
+              }
             })
         }
 
